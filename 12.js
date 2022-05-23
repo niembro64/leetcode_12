@@ -1,8 +1,22 @@
 var intToRoman = function (num) {
-    var s = "|";
+    var s = "";
 
-    var symbol = ["M", "D", "C", "L", "X", "V", "I"];
-    var value = [1000, 500, 100, 50, 10, 5, 1];
+    var symbol = [
+        "M",
+        "CM",
+        "D",
+        "CD",
+        "C",
+        "XC",
+        "L",
+        "XL",
+        "X",
+        "IX",
+        "V",
+        "IV",
+        "I",
+    ];
+    var value = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 
     for (var i = 0; i < symbol.length; i++) {
         while (num - value[i] >= 0) {
